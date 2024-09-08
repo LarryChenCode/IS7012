@@ -1,0 +1,22 @@
+@page
+@model YourNamespace.YourPageModel
+@{
+    int randomNumber = new Random().Next(1, 7); //GENERATES NUMBER BETWEEN 1 and 6
+    int winningNumber = 3;
+}
+
+<div class="container mt-8">
+    <h1>Welcome To Random Number Game</h1>
+    <p>Generated Random Number: @randomNumber</p>
+
+    @if (randomNumber == winningNumber)
+    {
+    <div class="alert alert-light">You Win!!!</div>
+    }
+    else
+    {
+    <div class="alert alert-dark">You Lose...</div>
+    }
+
+    <p>@Math.Abs(randomNumber - winningNumber) off</p>
+</div>

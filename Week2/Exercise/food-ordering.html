@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Larry's Burger House</title>
+    <style>
+        body {
+            font-family: "Lucida Console", Courier, monospace;
+            background-color: #202020;
+            margin: 0;
+            padding: 10px;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            height: 100vh;
+        }
+        .food-order-form {
+            background-color: #f9f61a;
+            padding: 20px;
+            border-radius: 10px;
+            width: 500px;
+        }
+        .food-order-form h2 {
+            text-align: center;
+            color: #000000;
+        }
+        .food-order-form h3 {
+            text-align: center;
+            color: #000000;
+        }
+        .food-order-form label {
+            display: block;
+            margin-bottom: 8px;
+            font-size: 16px;
+            color: #555555;
+        }
+        .food-order-form input,
+        .food-order-form select,
+        .food-order-form textarea {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #cdcdcd;
+            border-radius: 4px;
+            font-size: 14px;
+            color: #000000;
+        }
+        .food-order-form button {
+            width: 100%;
+            padding: 12px;
+            background-color: #000000;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            color: #f9f61a;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .food-order-form button:hover {
+            background-color: #2f2f2f;
+        }
+    </style>
+</head>
+<body>
+<div class="food-order-form">
+    <h2>Welcome to Larry's Burger House</h2>
+    <h3>Order Your Food Here</h3>
+    <form action="#" method="post">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" placeholder="Enter Your Name" required>
+
+        <label for="ucid">UCID (Start from M):</label>
+        <input type="text" id="ucid" name="ucid" placeholder="Enter Your UCID (Start from M)" required>
+
+        <label for="entree">Entree:</label>
+        <select id="entree" name="entree" required>
+            <option value="">--Please Select--</option>
+            <option value="cburger">Cheese Burger</option>
+            <option value="dcburger">Double Cheese Burger</option>
+            <option value="csandwich">Chicken Sandwich</option>
+            <option value="7nuggets">7pc Nuggets</option>
+        </select>
+
+        <label for="side">Side:</label>
+        <select id="side" name="side" required>
+            <option value="">--Please Select--</option>
+            <option value="no">No</option>
+            <option value="fries">Fries</option>
+            <option value="salad">Salad</option>
+            <option value="fruitcup">Fruit Cup</option>
+        </select>
+
+        <label for="drink">Drink:</label>
+        <select id="drink" name="drink" required>
+            <option value="">--Please Select--</option>
+            <option value="no">No</option>
+            <option value="icetea">Ice Tea</option>
+            <option value="coke">Coke</option>
+            <option value="water">Water</option>
+        </select>
+
+        <label for="comments">Special Requests:</label>
+        <textarea id="comments" name="comments" rows="2" placeholder="Tell me your special requests..."></textarea>
+        
+        <button type="submit">Submit Your Order</button>
+    </form>
+</div>
+</body>
+</html>
