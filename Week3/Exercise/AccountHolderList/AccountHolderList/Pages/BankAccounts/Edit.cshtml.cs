@@ -36,6 +36,7 @@ namespace AccountHolderList.Pages.BankAccounts
                 return NotFound();
             }
             BankAccount = bankaccount;
+            ViewData["AccountHolderId"] = new SelectList(_context.AccountHolder, "Id", "SSN");
             return Page();
         }
 

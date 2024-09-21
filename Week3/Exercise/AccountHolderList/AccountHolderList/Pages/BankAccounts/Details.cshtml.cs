@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 using AccountHolderList.Data;
 using AccountHolderList.Models;
+using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace AccountHolderList.Pages.BankAccounts
 {
@@ -28,7 +29,8 @@ namespace AccountHolderList.Pages.BankAccounts
                 return NotFound();
             }
 
-            var bankaccount = await _context.BankAccount.FirstOrDefaultAsync(m => m.Id == id);
+            var bankaccount = await _context.BankAccount
+                .Include(b => b.AccountHolder).FirstOrDefaultAsync(m => m.Id == id);
             if (bankaccount == null)
             {
                 return NotFound();

@@ -29,7 +29,8 @@ namespace AccountHolderList.Pages.BankAccounts
                 return NotFound();
             }
 
-            var bankaccount = await _context.BankAccount.FirstOrDefaultAsync(m => m.Id == id);
+            var bankaccount = await _context.BankAccount
+                .Include(b => b.AccountHolder).FirstOrDefaultAsync(m => m.Id == id);
 
             if (bankaccount == null)
             {

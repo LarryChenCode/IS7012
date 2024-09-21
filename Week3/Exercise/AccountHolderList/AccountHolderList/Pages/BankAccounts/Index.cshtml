@@ -5,10 +5,10 @@
     ViewData["Title"] = "Index";
 }
 
-<h1>Index</h1>
+<h1 style="font-size: 32px; color: #2638ed; font-weight: bold;">Bank Account List</h1>
 
 <p>
-    <a asp-page="Create">Create New</a>
+    <a asp-page="Create">Create a New Bank Account</a>
 </p>
 <table class="table">
     <thead>
@@ -29,7 +29,7 @@
                 @Html.DisplayNameFor(model => model.BankAccount[0].AccountType)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.BankAccount[0].HolderId)
+                @Html.DisplayNameFor(model => model.BankAccount[0].AccountHolder)
             </th>
             <th></th>
         </tr>
@@ -53,7 +53,7 @@
                 @Html.DisplayFor(modelItem => item.AccountType)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.HolderId)
+                @Html.DisplayFor(modelItem => item.AccountHolder.SSN)
             </td>
             <td>
                 <a asp-page="./Edit" asp-route-id="@item.Id">Edit</a> |

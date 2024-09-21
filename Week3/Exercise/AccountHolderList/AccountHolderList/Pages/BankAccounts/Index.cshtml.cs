@@ -23,7 +23,8 @@ namespace AccountHolderList.Pages.BankAccounts
 
         public async Task OnGetAsync()
         {
-            BankAccount = await _context.BankAccount.ToListAsync();
+            BankAccount = await _context.BankAccount
+                .Include(b => b.AccountHolder).ToListAsync();
         }
     }
 }

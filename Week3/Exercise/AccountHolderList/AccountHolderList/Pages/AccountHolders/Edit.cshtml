@@ -5,9 +5,8 @@
     ViewData["Title"] = "Edit";
 }
 
-<h1>Edit</h1>
+<h1 style="font-size: 32px; color: #2638ed; font-weight: bold;">Edit Info</h1>
 
-<h4>AccountHolder</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
@@ -30,6 +29,11 @@
                 <span asp-validation-for="AccountHolder.LastName" class="text-danger"></span>
             </div>
             <div class="form-group">
+                <label asp-for="AccountHolder.SSN" class="control-label"></label>
+                <input asp-for="AccountHolder.SSN" class="form-control" />
+                <span asp-validation-for="AccountHolder.SSN" class="text-danger"></span>
+            </div>
+            <div class="form-group">
                 <label asp-for="AccountHolder.DateOfBirth" class="control-label"></label>
                 <input asp-for="AccountHolder.DateOfBirth" class="form-control" />
                 <span asp-validation-for="AccountHolder.DateOfBirth" class="text-danger"></span>
@@ -38,11 +42,6 @@
                 <label asp-for="AccountHolder.PhoneNumber" class="control-label"></label>
                 <input asp-for="AccountHolder.PhoneNumber" class="form-control" />
                 <span asp-validation-for="AccountHolder.PhoneNumber" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="AccountHolder.AccountId" class="control-label"></label>
-                <input asp-for="AccountHolder.AccountId" class="form-control" />
-                <span asp-validation-for="AccountHolder.AccountId" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <input type="submit" value="Save" class="btn btn-primary" />
