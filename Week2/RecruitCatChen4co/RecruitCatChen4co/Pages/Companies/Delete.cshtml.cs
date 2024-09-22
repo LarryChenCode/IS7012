@@ -29,7 +29,9 @@ namespace RecruitCatChen4co.Pages.Companies
                 return NotFound();
             }
 
-            var company = await _context.Company.FirstOrDefaultAsync(m => m.Id == id);
+            var company = await _context.Company
+                .Include(c => c.Industry)
+                .FirstOrDefaultAsync(m => m.Id == id);
 
             if (company == null)
             {

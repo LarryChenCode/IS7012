@@ -28,7 +28,11 @@ namespace RecruitCatChen4co.Pages.Candidates
                 return NotFound();
             }
 
-            var candidate = await _context.Candidate.FirstOrDefaultAsync(m => m.Id == id);
+            var candidate = await _context.Candidate
+                .Include(c => c.JobTitle)
+                .Include(c => c.Industry)
+                .Include(c => c.Company)
+                .FirstOrDefaultAsync(m => m.Id == id);
             if (candidate == null)
             {
                 return NotFound();

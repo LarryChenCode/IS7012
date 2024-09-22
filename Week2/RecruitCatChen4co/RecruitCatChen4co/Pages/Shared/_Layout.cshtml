@@ -28,6 +28,18 @@
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-page="/OurTeam">Our Team</a>
                         </li>
+                        <!-- Application Portal Dropdown Menu -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-dark" href="#" id="applicationPortalDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Application Portal
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="applicationPortalDropdown">
+                                <li><a class="dropdown-item" asp-area="" asp-page="/Candidates/Index">Candidates</a></li>
+                                <li><a class="dropdown-item" asp-area="" asp-page="/Companies/Index">Companies</a></li>
+                                <li><a class="dropdown-item" asp-area="" asp-page="/Industries/Index">Industries</a></li>
+                                <li><a class="dropdown-item" asp-area="" asp-page="/JobTitles/Index">Job Titles</a></li>
+                            </ul>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -52,3 +64,4 @@
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>
+

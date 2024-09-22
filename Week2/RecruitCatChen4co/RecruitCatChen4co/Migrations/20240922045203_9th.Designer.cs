@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using RecruitCatChen4co.Data;
 
@@ -11,9 +12,11 @@ using RecruitCatChen4co.Data;
 namespace RecruitCatChen4co.Migrations
 {
     [DbContext(typeof(RecruitCatChen4coContext))]
-    partial class RecruitCatChen4coContextModelSnapshot : ModelSnapshot
+    [Migration("20240922045203_9th")]
+    partial class _9th
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

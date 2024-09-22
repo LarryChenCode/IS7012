@@ -36,7 +36,7 @@ namespace RecruitCatChen4co.Pages.Companies
                 return NotFound();
             }
             Company = company;
-           ViewData["IndustryId"] = new SelectList(_context.Industry, "Id", "Id");
+           ViewData["IndustryId"] = new SelectList(_context.Industry, "Id", "IndustryName");
             return Page();
         }
 

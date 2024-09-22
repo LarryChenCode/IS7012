@@ -5,7 +5,7 @@
     ViewData["Title"] = "Index";
 }
 
-<h1>Index</h1>
+<h1 style="font-size: 32px; color: #2638ed; font-weight: bold;">All Candidates</h1>
 
 <p>
     <a asp-page="Create">Create New</a>
@@ -32,16 +32,10 @@
                 @Html.DisplayNameFor(model => model.Candidate[0].EmailAddress)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Candidate[0].LinkedInProfile)
-            </th>
-            <th>
                 @Html.DisplayNameFor(model => model.Candidate[0].Company)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Candidate[0].JobTitle)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Candidate[0].Industry)
             </th>
             <th></th>
         </tr>
@@ -68,16 +62,10 @@
                 @Html.DisplayFor(modelItem => item.EmailAddress)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.LinkedInProfile)
+                @Html.DisplayFor(modelItem => item.Company.CompanyName)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Company.Id)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.JobTitle.Id)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Industry.Id)
+                @Html.DisplayFor(modelItem => item.JobTitle.Title)
             </td>
             <td>
                 <a asp-page="./Edit" asp-route-id="@item.Id">Edit</a> |

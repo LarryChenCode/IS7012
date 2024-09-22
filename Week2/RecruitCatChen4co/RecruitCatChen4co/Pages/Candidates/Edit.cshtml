@@ -5,9 +5,8 @@
     ViewData["Title"] = "Edit";
 }
 
-<h1>Edit</h1>
+<h1>Edit Candidate: @Model.Candidate.FirstName @Model.Candidate.LastName</h1>
 
-<h4>Candidate</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
@@ -50,17 +49,17 @@
                 <span asp-validation-for="Candidate.LinkedInProfile" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Candidate.CompanyId" class="control-label"></label>
+                <label class="control-label">Company</label>
                 <select asp-for="Candidate.CompanyId" class="form-control" asp-items="ViewBag.CompanyId"></select>
                 <span asp-validation-for="Candidate.CompanyId" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Candidate.JobTitleId" class="control-label"></label>
+                <label class="control-label">Job Title</label>
                 <select asp-for="Candidate.JobTitleId" class="form-control" asp-items="ViewBag.JobTitleId"></select>
                 <span asp-validation-for="Candidate.JobTitleId" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Candidate.IndustryId" class="control-label"></label>
+                <label class="control-label">Industry</label>
                 <select asp-for="Candidate.IndustryId" class="form-control" asp-items="ViewBag.IndustryId"></select>
                 <span asp-validation-for="Candidate.IndustryId" class="text-danger"></span>
             </div>
